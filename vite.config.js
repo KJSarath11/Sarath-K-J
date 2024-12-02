@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
+// Vite configuration for Netlify deployment
 export default defineConfig({
-  base: '/Sarath-K-J/', // Ensure this matches your repository name
+  base: '/',  // Set base path for Netlify deployment (or use '/<repository-name>/' for subdirectory)
+  build: {
+    outDir: 'build',  // Set build output directory to 'build'
+  },
   plugins: [react()],
 });
